@@ -34,25 +34,37 @@
 
       <div class="nav-right">
         <button id="menu-toggle" class="menu-toggle">☰</button>
-        <div class="dropdown" id="dropdown">
-          <!-- <a href="" data-bs-toggle="modal" data-bs-target="#exampleModalR" class="dropdown-links">{{ report_icon() }}Report</a>
-          <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-links">{{ feedback_icon() }}Feedback</a> -->
-          <button data-bs-toggle="modal" data-bs-target="#exampleModalR" class="dropdown-links">{{ report_icon() }}Report</button>
-          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-links">{{ feedback_icon() }}Feedback</button>
-          <form action="{{ url_for('auth.logout') }}" method="POST" class="d-flex">
-            <button class="dropdown-links" style="border: none;">{{ logout_icon() }}Logout</button>
-          </form>
-          <!-- <a href="" class="dropdown-links">{{ logout_icon() }}Logout</a> -->
-        </div>
+          <div class="dropdown" id="dropdown">
+            <button data-bs-toggle="modal" data-bs-target="#exampleModalR" class="dropdown-links">{{ report_icon() }}Report</button>
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-links">{{ feedback_icon() }}Feedback</button>
+            <form action="{{ url_for('auth.logout') }}" method="POST" class="d-flex">
+              <button class="dropdown-links">{{ logout_icon() }}Logout</button>
+            </form>
+          </div>
       </div>
     </header>
 
     <div class="layout">
 
       <aside class="sidebar">
-        <a href="#">Dashboard</a>
-        <a href="#">Tasks</a>
-        <a href="#">Settings</a>
+        <a href="{{ url_for('home') }}" class="sidebar-links">
+          Home
+        </a>
+        <a href="{{ url_for('meme.show_meme') }}" class="sidebar-links">
+          Memes
+        </a>
+        <a href="{{ url_for('game.game_play') }}" class="sidebar-links">
+          Hangman
+        </a>
+        <a href="{{ url_for('exam.result') }}" class="sidebar-links">
+          Stats
+        </a>
+        <a href="{{ url_for('message.inbox') }}" class="sidebar-links">
+          Inbox
+        </a>
+        <a href="{{ url_for('user.profile') }}" class="sidebar-links">
+          Profile
+        </a>
       </aside>
 
       <main class="content">
