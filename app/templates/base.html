@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
 </head>
 <body style="text-align: center;">
-{% from 'icons.html' import search_icon, report_icon, feedback_icon, logout_icon %}
+{% from 'icons.html' import search_icon, report_icon, feedback_icon, logout_icon, home_icon, meme_icon, hangman_icon, stats_icon, message_icon %}
 
 
   <div class="app">
@@ -48,18 +48,23 @@
 
       <aside class="sidebar">
         <a href="{{ url_for('home') }}" class="sidebar-links">
+        {{ home_icon() }}
           Home
         </a>
         <a href="{{ url_for('meme.show_meme') }}" class="sidebar-links">
+        {{ meme_icon() }}
           Memes
         </a>
         <a href="{{ url_for('game.game_play') }}" class="sidebar-links">
+        {{ hangman_icon() }}
           Hangman
         </a>
         <a href="{{ url_for('exam.result') }}" class="sidebar-links">
+        {{ stats_icon() }}
           Stats
         </a>
         <a href="{{ url_for('message.inbox') }}" class="sidebar-links">
+        {{ message_icon() }}
           Inbox
         </a>
         <a href="{{ url_for('user.profile') }}" class="sidebar-links">

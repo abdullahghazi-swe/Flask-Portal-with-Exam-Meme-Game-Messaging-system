@@ -62,4 +62,8 @@ This is a beginner project and may contain bugs<br>
 ## Upcoming Features
 
 - New UI
-
+- Make fully Mobile responsive
+- Change Exam to survey
+- Add Live Chat
+- Fix Major Bugs
+- Make it secure and Modern
