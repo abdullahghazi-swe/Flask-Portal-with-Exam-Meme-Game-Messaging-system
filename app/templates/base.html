@@ -67,7 +67,8 @@
         {{ message_icon() }}
           Inbox
         </a>
-        <a href="{{ url_for('user.profile') }}" class="sidebar-links">
+        <a href="{{ url_for('user.profile') }}" class="sidebar-links sidebar-profile">
+          <img src="{{ url_for('static', filename='images/avatars/' + session['profile_picture']) }}" class="nav-profile" alt="profile-pic">
           Profile
         </a>
       </aside>

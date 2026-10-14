@@ -188,6 +188,7 @@ html, body {
     align-items: center;
     gap: 14px;
     border-radius: 8px;
+    font-weight: 400;
 }
 
 .sidebar-links:hover {
@@ -200,6 +201,9 @@ html, body {
 
 }
 
+.sidebar-profile {
+    gap: 10px;
+}
 
 
 /* .nav-bar {
@@ -628,12 +632,10 @@ html, body {
 
 .nav-profile {
     aspect-ratio: 1 / 1;
-    width: 25px;
+    width: 32px;
     object-fit: cover;
     border-radius: 50%;
-    margin-left: -10px;
-    margin-right: 8px;
-    margin-top: -3px;
+    margin-left: -7px;
 }
 
 .profile-box {
