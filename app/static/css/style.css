@@ -195,10 +195,13 @@ html, body {
     background-color: #d5d9df;
 }
 
+.current-tab {
+    background-color: #cfcfcf;
+}
+
 .sidebar-links svg {
     height: auto;
     width: 22px;
-
 }
 
 .sidebar-profile {

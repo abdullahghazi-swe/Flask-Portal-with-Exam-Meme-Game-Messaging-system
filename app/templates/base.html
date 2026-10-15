@@ -47,27 +47,27 @@
     <div class="layout">
 
       <aside class="sidebar">
-        <a href="{{ url_for('home') }}" class="sidebar-links">
+        <a href="{{ url_for('home') }}" class="sidebar-links {% if request.endpoint == 'home' %}current-tab{% endif %}">
         {{ home_icon() }}
           Home
         </a>
-        <a href="{{ url_for('meme.show_meme') }}" class="sidebar-links">
+        <a href="{{ url_for('meme.show_meme') }}" class="sidebar-links {% if request.blueprint == 'meme' %}current-tab{% endif %}">
         {{ meme_icon() }}
           Memes
         </a>
-        <a href="{{ url_for('game.game_play') }}" class="sidebar-links">
+        <a href="{{ url_for('game.game_play') }}" class="sidebar-links {% if request.blueprint == 'game' %}current-tab{% endif %}">
         {{ hangman_icon() }}
           Hangman
         </a>
-        <a href="{{ url_for('exam.result') }}" class="sidebar-links">
+        <a href="{{ url_for('exam.result') }}" class="sidebar-links {% if request.blueprint == 'exam' %}current-tab{% endif %}">
         {{ stats_icon() }}
           Stats
         </a>
-        <a href="{{ url_for('message.inbox') }}" class="sidebar-links">
+        <a href="{{ url_for('message.inbox') }}" class="sidebar-links {% if request.blueprint == 'message' %}current-tab{% endif %}">
         {{ message_icon() }}
           Inbox
         </a>
-        <a href="{{ url_for('user.profile') }}" class="sidebar-links sidebar-profile">
+        <a href="{{ url_for('user.profile') }}" class="sidebar-links sidebar-profile {% if request.blueprint == 'social' %}current-tab{% endif %}">
           <img src="{{ url_for('static', filename='images/avatars/' + session['profile_picture']) }}" class="nav-profile" alt="profile-pic">
           Profile
         </a>
