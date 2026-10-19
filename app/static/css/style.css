@@ -26,6 +26,29 @@ html, body {
     overflow: hidden;
 }
 
+.auth-bar {
+    padding-right: 60px;
+    display: flex;
+    gap: 16px;
+}
+
+.reg {
+    text-decoration: none;
+    color: #202529;
+    border: 1px solid #202529;
+    background-color: #d3d8db;
+    padding: 6px 16px;
+    border-radius: 12px;
+}
+
+.login {
+    text-decoration: none;
+    background-color: #4255e4;
+    color: white;
+    border-radius: 12px;
+    padding: 6px 16px;
+}
+
 .sidebar {
     width: 280px;
     background: #ebeef1;
@@ -920,5 +943,9 @@ html, body {
 
 .butn-inv:hover {
     background-color: #4b5661;
+}
+
+.no-nav {
+    padding: 50px;
 }
 

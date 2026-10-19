@@ -33,19 +33,26 @@
       </div>
 
       <div class="nav-right">
+        {% if 'user_id' in session %}
         <button id="menu-toggle" class="menu-toggle">☰</button>
-          <div class="dropdown" id="dropdown">
-            <button data-bs-toggle="modal" data-bs-target="#exampleModalR" class="dropdown-links">{{ report_icon() }}Report</button>
-            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-links">{{ feedback_icon() }}Feedback</button>
-            <form action="{{ url_for('auth.logout') }}" method="POST" class="d-flex">
-              <button class="dropdown-links">{{ logout_icon() }}Logout</button>
-            </form>
-          </div>
+        <div class="dropdown" id="dropdown">
+          <button data-bs-toggle="modal" data-bs-target="#exampleModalR" class="dropdown-links">{{ report_icon() }}Report</button>
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-links">{{ feedback_icon() }}Feedback</button>
+          <form action="{{ url_for('auth.logout') }}" method="POST" class="d-flex">
+            <button class="dropdown-links">{{ logout_icon() }}Logout</button>
+          </form>
+        </div>
+        {% else %}
+        <div class="auth-bar">
+          <a class="reg" href="{{ url_for('auth.reg') }}">Sign up</a>
+          <a class="login" href="{{ url_for('auth.login') }}">Log in</a>
+        </div>
+        {% endif %}
       </div>
     </header>
 
     <div class="layout">
-
+      {% if 'user_id' in session %}
       <aside class="sidebar">
         <a href="{{ url_for('home') }}" class="sidebar-links {% if request.endpoint == 'home' %}current-tab{% endif %}">
         {{ home_icon() }}
@@ -72,8 +79,9 @@
           Profile
         </a>
       </aside>
+      {% endif %}
 
-      <main class="content">
+      <main class="content {% if 'user_id' not in session %}no-nav{% endif %}">
         <div class="inner-content">
           {% block content %} {% endblock %}
         </div>
