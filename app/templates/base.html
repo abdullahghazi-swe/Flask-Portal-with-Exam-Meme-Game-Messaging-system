@@ -66,7 +66,7 @@
         {{ hangman_icon() }}
           Hangman
         </a>
-        <a href="{{ url_for('exam.result') }}" class="sidebar-links {% if request.blueprint == 'exam' %}current-tab{% endif %}">
+        <a href="{{ url_for('quiz.result') }}" class="sidebar-links {% if request.blueprint == 'quiz' %}current-tab{% endif %}">
         {{ stats_icon() }}
           Stats
         </a>

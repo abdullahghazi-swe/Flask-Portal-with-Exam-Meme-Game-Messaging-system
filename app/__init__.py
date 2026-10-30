@@ -24,7 +24,7 @@ def create_app():
     migrate.init_app(app, db)
 
     from .memes import meme_bp
-    from .exam import exam_bp
+    from .quiz import quiz_bp
     from .auth import auth_bp
     from .game import game_bp
     from .message import msg_bp
@@ -34,7 +34,7 @@ def create_app():
     from .support import support_bp
 
     app.register_blueprint(meme_bp)
-    app.register_blueprint(exam_bp)
+    app.register_blueprint(quiz_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(game_bp)
     app.register_blueprint(msg_bp)

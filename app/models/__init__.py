@@ -5,7 +5,7 @@ from sqlalchemy.orm import with_loader_criteria
 
 from .users import Users, UserProfiles
 from .messages import Messages
-from .exam import Questions, Results
+from .quiz import Questions, Results
 from .game import Words
 from .support import Reports, Feedbacks
 from .social import Follows

@@ -22,8 +22,8 @@ def panel():
     flash("You are not allowed access this page!", 'danger')
     return redirect(url_for('home'))
 
-@admin_bp.route("/create-exam", methods = ["GET","POST"])
-def create_exam():
+@admin_bp.route("/create-quiz", methods = ["GET","POST"])
+def create_quiz():
     if "user_id" not in session:
         flash("Please login first!", 'danger')
         return redirect(url_for('auth.login'))

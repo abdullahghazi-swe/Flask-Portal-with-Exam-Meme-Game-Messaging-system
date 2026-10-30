@@ -112,7 +112,7 @@
       <div class="col-md-8 col px-0">
         {% if user.id == session['user_id'] %}
           <a href="{{ url_for('user.setting') }}" class="btn btn-secondary profile-button butn-inv">Edit Profile</a>
-          <a href="{{ url_for('exam.result') }}" class="btn btn-primary profile-button">View Stats</a>
+          <a href="{{ url_for('quiz.result') }}" class="btn btn-primary profile-button">View Stats</a>
         {% else %}
           {% if user.followStatus %}
             <form action="{{ url_for('social.unFollow') }}" method="POST" class="d-inline">
