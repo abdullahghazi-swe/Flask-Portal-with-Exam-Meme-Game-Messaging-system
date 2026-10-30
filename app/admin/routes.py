@@ -43,9 +43,9 @@ def create_quiz():
             db.session.commit()
 
             flash("Question Added Sccessfully!", 'success')
-            return redirect(url_for("admin.create_exam"))
+            return redirect(url_for("admin.create_quiz"))
 
-        return render_template("admin/create_exam.html")
+        return render_template("admin/create_quiz.html")
 
     flash("You are not allowed to access this page!", 'danger')
     return redirect(url_for('home'))
